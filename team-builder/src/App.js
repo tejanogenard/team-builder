@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TeamForm from './components/TeamForm'
+import TeamMates from './components/TeamMates'
 import ReactDom from "react-dom";
-import teamMates from "./components/teamMates"
-import teamForm from "./components/teamForm"
+
 
 function App() {
   const [teamMates, setTeamMates] = useState(
@@ -14,23 +15,21 @@ function App() {
       age: Number, 
       height: Number,
       weight: Number, 
-      job_Description: ""
-
+      height: Number,
+      job_D: ""
 
      }
   ) 
-
-
-
-
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          React Team Form
         </p>
+          <TeamForm />
+          <TeamMates />
         <a
           className="App-link"
           href="https://reactjs.org"
